@@ -1,0 +1,418 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5% ; /* reseteo para REMS , igual a 10px de 16px */
+}
+
+*,*:before,*:after {       /*  para que el padding no modifique los valores que le paso al ancho del boton */
+    box-sizing: inherit;
+}
+
+/* Estilos Globales */
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    font-family: 'Lato' , sans-serif; 
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+
+h1{
+    font-size: 3.5rem;
+    font-family: 'Nova Flat' , cursive;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+h4{
+    font-size: 2.6rem;
+}
+
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.seccionPadding{
+    padding: 2rem 0;
+}
+
+.fw-300{
+    font-weight: 300;
+}
+
+.centrar-texto{
+    text-align: center ;
+    padding-bottom: 2rem;
+}
+
+/* botones */
+.boton{
+    color: seashell;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    display: inline-block; /* para poder modificar el ancho de botones*/
+}
+
+.boton:hover{
+    cursor:pointer;
+}
+
+.d-block{            /* para el boton ocupe todo el ancho del espacio que tengo*/
+    display: block;
+}
+
+.botones-naranjas{
+    background-color: #e08709;
+}
+
+.botones-verdes{
+    background-color: #71b100;
+}
+
+
+/* header */
+
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.contacto{
+    background-color: #71b100;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio{
+    background: url(../img/header.jpg);
+    background-position: center center; /* que parte de la imagen se va a mostrar( en este caso el centro de la img)*/
+    background-size: cover; /* que cubra todo el ancho y largo de la imagen posible */
+    height: 100vh; /* que ocupe el tamaño de pantalla */
+    min-height: 60rem; /* para que tenga un limite de ajuste de pantalla cuando reduzco el tamaño de pantalla */
+}
+
+.contenido-header{
+    height: 100%; /* para que ocupe todo el header */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido-header h1{
+    padding-bottom: 2rem;
+    max-width: 60rem; /*  espacio con respecto al limite inferior del area del header*/
+    line-height: 2; /* interlineado */
+    color:chartreuse;
+    
+}
+
+.barra{
+    display: flex; /* opcion para posicionamiento de barras */
+    justify-content: space-between; /* alinea un segmento a la izq y el otro a la derecha */
+    align-items: center;
+    padding-top: 3rem; /* espacio dejado con el tope */
+}
+
+/* NAVEGACION */
+.navegacion a {
+    color: rgba(255, 255, 255,.7);
+    text-decoration: none; /* para que no salga la linea marcada de los enlaces */
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    margin-right: 2rem; /* espacio que se deja entre los elem */ 
+}
+
+.navegacion a:hover{  /* opcion para cambiar el color de los elem cuando se pase con el cursor */ 
+    color: white;
+}
+.navegacion a:last-of-type{ /* estilos para el ultimo elem del tipo( en este caso 'a' ) */
+    margin-right: 0%;
+}
+
+/* iconos nosotros */
+
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;    
+}
+
+.iconos{
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}    
+
+/* estilos de anuncios */
+
+.contenedor-anuncios{
+    display: flex;
+    justify-content: space-between;
+}
+
+.estilo-anuncios{
+    flex-basis: calc(33.3% - 1rem);
+    border: 1px solid #b5b5b5;
+    background-color: #f5f5f5;
+}
+
+.contenido-anuncios{
+    padding: 2rem;
+}
+.contenido-anuncios h3{
+    margin: 0;
+}
+
+
+.precio{
+    color: seagreen;
+    font-weight: 700;
+}
+
+.iconos-caracteristicas{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+}
+
+.iconos-caracteristicas li{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+} 
+
+.verTodas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* seccion encuentra la casa de tus sueños */
+
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contacto{
+    flex: 1;
+    color: #ffffff
+}
+
+.contacto p{
+    font-size: 1.8rem;
+}
+
+/*  SECCION INFERIOR-TESTIMONIALES  */
+
+.seccion-inferior {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.seccion-inferior .blog{
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog :last-of-type{
+    margin-bottom: 0%;
+}
+
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada h4{
+    margin-top: 0;
+    line-height: 3rem;
+}
+
+.texto-entrada a{
+    color: black;
+    text-decoration: none;
+}
+
+.texto-entrada h4::after{
+    content: "";
+    display: block;
+    width: 20rem;
+    height: .5rem;
+    background-color: chartreuse;
+    margin-top: 1rem;
+}
+
+.texto-entrada span{
+    color: crimson;
+    font-style: italic;
+}
+
+/*  TESTIMONIALES */
+
+.testimonial{
+    background-color:chartreuse;
+    color: #ffffff;
+    font-size: 2.4rem;
+    padding: 2rem;
+    line-height: 4rem;
+    border-radius: 5%;
+}
+
+.testimonial p{
+    text-align: end;
+}
+
+.testimonial blockquote{
+    font-style: italic;
+    position: relative;  /* para poder posicionar un elem en una posicion especifica dentro del blockquote (la img del before) */
+    padding-left: 3rem;
+    font-weight: 300;
+}
+
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 3rem;
+    display: block;
+    margin-left: 0rem;
+    position: absolute;
+    top: -1rem;
+    left: -4rem;
+}
+
+/* PIE DE PAGINA */
+
+.footer{
+    background-color: #333333;
+    margin-bottom: 0rem;
+}
+
+.contenedor-footer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.copyright{
+    color: #ffffff;
+}
+
+
+/* ------------- -----------Pagina NOSOTROS-------------------------*/
+
+
+.contenedor-nosotros{
+    display: grid;
+    grid-template-columns: 50% 50%; /* para dividir en columnas */
+    grid-column-gap: 2.5rem;
+}
+
+.texto-nosotros blockquote{
+    text-align: start;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    padding: .5rem 0 3rem 0;
+}
+
+/*--------------------------pagina ANUNCIOS---------------*/
+
+.barra-anuncio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido-centrado{
+    max-width: 800px;
+}
+
+/*--------------------pag CONTACTO-------------*/
+
+.estilos-form{
+    background-color: #dddddd;
+    border-radius: 10rem;
+    border-color: #e1e1e1;
+    border: none;
+    padding: .5rem 1rem;
+    margin-bottom: 2rem;
+    margin-top: .8rem;
+    width: 100%;
+}
+
+input[type="radio"]{
+    width: auto;
+}
+
+label{
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+legend{
+    font-weight: 700;
+    font-family: 'Oswald',sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+fieldset{
+    margin: 3rem 0;
+}
+
+.text-area{
+    border-radius: 0%;
+    height: 20rem;
+}
+
+.forma-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+
